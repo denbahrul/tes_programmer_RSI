@@ -1,6 +1,11 @@
 <?php
     require 'function.php';
 
+    $id = $_GET["id"];
+
+    // query data mahasiswa berdasarkan id
+    $pasien = query("SELECT * FROM tbl_pasien WHERE id_pasien = $id")[0];
+
     if( isset($_POST["submit"]) ) {
 	
         if( ubah($_POST) > 0 ) {
@@ -30,6 +35,7 @@
     <body>
         <h1>Ubah Data Pasien</h1>
         <form action="" method="post">
+            <input type="hidden" name="id" value="<?= $pasien["id_pasien"]; ?>">
             <ul>
                 <li>
                     <label for="nama">Nama :</label>
