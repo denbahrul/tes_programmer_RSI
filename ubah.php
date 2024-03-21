@@ -39,22 +39,22 @@
             <ul>
                 <li>
                     <label for="nama">Nama :</label>
-                    <input type="text" name="nama" id="nama" required>
+                    <input type="text" name="nama" id="nama" value="<?= $pasien["nama_pasien"]; ?>" required>
                 </li>
                 <li>
                     <label for="jenis_kelamin">Jenis Kelamin :</label>
-                    <select name="jenis_kelamin" id="jenis_kelamin" required>
+                    <select name="jenis_kelamin" id="jenis_kelamin" value="<?= $pasien["jenis_kelamin_pasien"]; ?>" required>
                         <option value="L">Laki-laki</option>
                         <option value="P">Perempuan</option>
                     </select>
                 </li>
                 <li>
                     <label for="tgl_lahir">Tanggal Lahir :</label>
-                    <input type="date" name="tgl_lahir" id="tgl_lahir" required>
+                    <input type="date" name="tgl_lahir" id="tgl_lahir" value="<?= $pasien["tgl_lahir_pasien"]; ?>" required>
                 </li>
                 <li>
                     <label for="alamat">Alamat :</label>
-                    <input type="text" name="alamat" id="alamat" required>
+                    <input type="text" name="alamat" id="alamat" value="<?= $pasien["alamat_pasien"]; ?>" required>
                 </li>
                 <button type="submit" name="submit">Simpan</button>
             </ul>
